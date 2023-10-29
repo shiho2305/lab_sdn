@@ -1,0 +1,163 @@
+nav{
+    display: flex;
+    border-bottom: 2px solid #f3f3f3;
+    /* justify-content: space-around; */
+    justify-content: left;
+    align-items: center;
+    padding: 20px;
+    z-index: 999;
+    margin-left: 2rem;
+    padding-left: 5rem;
+}
+
+/* input{
+    padding: 12px 20px;
+    border: none;
+    background: #f7f6f6;
+    outline: none;
+    margin-right: 20px;
+    border-radius: 5px;
+    position: relative;
+    width: 14rem;
+    
+} */
+
+.nav-icons{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 2rem;
+    position: relative;
+    bottom:2px;
+}
+
+.active{
+    color: blue !important;
+}
+
+/* style of products */
+.product-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    z-index: -2;
+}
+
+.product-card{
+    margin:20px;
+    border: 2px solid #ededed;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.product-card-img{
+    width: 13rem;
+    margin-bottom: 1rem; 
+}
+
+.product-card-title{
+    margin-bottom: 1rem;
+}
+
+.product-card-reviews{
+    margin-bottom: 1rem;
+    display: flex;
+
+}
+
+.rating-start{
+    color: #d5ab55;
+}
+
+.total-reviews{
+    font-size: 0.9rem;
+    margin-left: 10px;
+}
+
+.product-card-price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-btn{
+    display: flex;
+    margin-top: 2rem;
+    margin-left: 12rem;
+    gap: 6px;
+}
+
+.Category-brand{
+    font-size: large;
+    margin-bottom: 1rem;
+    font-weight: bolder;
+    font-family: cursive;
+    font-style: italic;
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
+    color: rgb(142, 142, 237);
+}
+
+.btn-createProduct{
+    margin-top: 2rem;
+    margin-right: 12rem;
+}
+
+
+.form-label{
+    font-weight: 600;
+    font-style: oblique;
+    font-family: cursive;
+}
+
+.form-input{
+    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.4);
+}
+
+.btn-addProduct{
+    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.4);
+    font-weight: bolder;
+    width: 8rem;
+}
+
+/* style product detail  */
+.product-detail{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5rem;
+}
+
+.img-productDetail{
+    max-width: 400px;
+}
+
+.title-productDetail{
+    font-size: xx-large;
+}
+
+.price-productDetail span{
+    color: red;
+    font-weight: bolder;
+}
+
+.category-productDetail span{
+    font-size: large;
+    margin-bottom: 1rem;
+    font-weight: bolder;
+    font-family: cursive;
+    font-style: italic;
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
+    color: rgb(142, 142, 237);
+}
+
+.description-productDetail{
+    font-family: cursive;
+    font-weight: 500;
+}
+
+
+
+
+
