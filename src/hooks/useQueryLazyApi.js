@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useEffect, useReducer } from "react";
+import { useReducer } from "react";
 
 const INITIAL_STATE = {
   isLoading: false,
@@ -24,10 +24,10 @@ const reducer = (state, action) => {
   }
 };
 
-const useFetchApi = (endpoint) => {
+const useQueryLazyApi = () => {
   const [state, dispatch] = useReducer(reducer, INITIAL_STATE);
 
-  const fetchApi = async (endpointURL) => {
+  const trigger = async (endpointURL) => {
     dispatch({
       type: "API_LOADING",
     });
@@ -45,11 +45,7 @@ const useFetchApi = (endpoint) => {
     }
   };
 
-  useEffect(() => {
-    fetchApi(endpoint);
-  }, [endpoint]);
-
-  return state;
+  return [trigger, state];
 };
 
-export default useFetchApi;
+export default useQueryLazyApi;

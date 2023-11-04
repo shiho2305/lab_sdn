@@ -1,38 +1,29 @@
-import React from 'react';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import NavWeb from './Component/NavWeb.js';
-import Product from './Component/Product.js';
-import Categories from './Component/Categories.js';
-import ProductDetail from './Component/ProductDetail.js';
+import React, { useEffect } from "react";
+
+import useQueryLazyApi from "./hooks/useQueryLazyApi.js";
+import useMutationApi from "./hooks/useMutationApi";
 
 // router
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <NavWeb/>, 
-    children: [
-      {
-        path: "/products", 
-        element: <Product/>
-      },
-      {
-        path: "/productsDetals", 
-        element: <ProductDetail/>
-      },
-      {
-        path: "/categories", 
-        element: <Categories/>
-      }
-    ]
-  },
-]);
 
 function App() {
+  const [trigger, { data }] = useQueryLazyApi();
+
+  useEffect(() => {
+    trigger("/posts/1/comments");
+  }, []);
+
+  const [deleteTrigger] = useMutationApi();
   return (
     <div className="body">
-       <RouterProvider router={router}/>
+      <button
+        onClick={() => {
+          deleteTrigger("/posts/1", "DELETE");
+        }}
+      >
+        delete
+      </button>
     </div>
-  ) 
-};
+  );
+}
 
 export default App;
